@@ -32,9 +32,9 @@ top_10 = total_pais[order(total_pais$`goles$goles`, decreasing = T),] #ordeno po
 top_10= top_10 [1:10,] #extrayendo los 10 mayores valores
 
 colnames(top_10)=variables
-p= ggplot (data=top_10, aes(equipo , y=top_10$goles, fill=top_10$equipo))+ xlab("Goles")+ ylab("Países") +geom_bar( stat = "identity" ) #grafica en horizontal,
+p= ggplot (data=top_10, aes(equipo , y=top_10$goles, fill=top_10$equipo))+ xlab("Países")+ ylab("Goles") +geom_bar( stat = "identity" ) #grafica en horizontal,
 
-p+ guides(fill=FALSE) + coord_flip() + ggtitle("Mayores paises goleadores") # sin referencias , con titulo y en horizontal
+p+ guides(fill=FALSE) + coord_flip() + ggtitle("Top 10 paises goleadores") # sin referencias , con titulo y en horizontal
 
 
 #gracias por leer el codigo. cualquier cosa puedes escrbirme a emiliano.gutierrez@uns.edu.ar
